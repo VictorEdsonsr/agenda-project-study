@@ -1,13 +1,42 @@
 <%- include("includes/head"); %>
 
-<div class="container">
-    <form method="POST" action="/">
-        <label>Cliente</label>
-        <input type="hidden" name="_csrf" value="<%= csrfToken %;>" />
-        <input name="cliente" type="text" />
-        <button>Enviar</button>
-    </form>
-</div>
+<main class="d-flex h-100">
+    <%- include("includes/navbar") %>
+
+
+    <table class="table w-100 d-flex flex-column">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</main>
+
 
 
 <%- include("includes/footer"); %>

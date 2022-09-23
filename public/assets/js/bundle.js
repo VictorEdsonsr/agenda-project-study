@@ -19896,9 +19896,8 @@ module.exports = __webpack_require__(/*! ../internals/path */ "./node_modules/co
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap);"]);
 // Module
-exports.push([module.i, "/*FONTS*/\n\n/*GLOBAL*/\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif;\n}\n\n/*MAIN*/\nbody {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  background: rgb(34, 183, 195);\n  background: linear-gradient(\n    0deg,\n    rgba(34, 183, 195, 1) 11%,\n    rgba(25, 33, 117, 1) 69%\n  );\n}\n\nh1 {\n  font-size: 20px;\n  text-transform: uppercase;\n  letter-spacing: 4px;\n  margin-bottom: 6px;\n}\n.form {\n  display: flex;\n  flex-direction: column;\n  padding: 10px;\n}\n\n.form label {\n  font-size: 10px;\n  padding-top: 10px;\n  padding-bottom: 5px;\n}\n\n.form input {\n  border: 0;\n  background-color: transparent;\n  border-bottom: solid 1px rgb(34, 183, 195);\n  border-radius: 0;\n  outline: none;\n}\n\n.form input :focus {\n  background: #dfdfdf;\n}\n\n.container {\n  max-width: 640px;\n  background-color: white;\n  border-radius: 10px;\n  display: flex;\n  justify-content: center;\n  margin: 0 auto;\n  flex-direction: column;\n  align-items: center;\n  padding: 15px;\n}\n\n.btn {\n  padding: 7px 17px;\n  font-size: 10px;\n  margin: 0 auto;\n  margin-top: 10px;\n  cursor: pointer;\n  border: 0;\n  background: #dfdfdf;\n  border-radius: 10px;\n}\n\n.btn:hover {\n  background: #746464;\n}\n\n.error-text {\n  color: red;\n  margin-top: 3px;\n  font-size: 7px;\n}\n", ""]);
+exports.push([module.i, "", ""]);
 // Exports
 module.exports = exports;
 
