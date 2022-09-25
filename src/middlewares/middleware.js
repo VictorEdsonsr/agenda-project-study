@@ -1,8 +1,5 @@
-exports.firstMiddleware = (req, res, next) => {
-  if (req.body.cliente) {
-    console.log(req.body.cliente);
-  }
-
+exports.globalMiddleware = (req, res, next) => {
+  res.locals.errors = req.flash("errors");
   next();
 };
 

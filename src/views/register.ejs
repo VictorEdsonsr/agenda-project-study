@@ -8,19 +8,22 @@
     <div class="text-white m-auto container h-100 d-flex justify-content-center align-items-center">
         <form class=" g-3 mx-auto w-75 bg-dark rounded p-3 shadow " method="POST" action="/user/register">
             <h1 class="text-center">CRIAR UMA CONTA</h1>
+
+            <%-include("includes/messages");%>
+
             <input type="hidden" name="_csrf" value=<%=csrfToken %> />
             <div>
                 <label for="inputEmail4" class="form-label">Email</label>
 
-                <input type="email" class="form-control" name="email" id="inputEmail4">
+                <input type="email" class="form-control" required name="email" id="inputEmail4">
             </div>
             <div class="my-3">
                 <label for="inputPassword4" class="form-label">Senha</label>
-                <input type="password" class="form-control " name="password" id="password">
+                <input type="password" class="form-control " required name="password" id="password">
             </div>
             <div>
                 <label for="inputPassword4" class="form-label">Confirme sua Senha</label>
-                <input type="password" class="form-control " name="confirmPassword" id="conformPassword">
+                <input type="password" class="form-control " required name="confirmPassword" id="conformPassword">
             </div>
 
             <div class="text-center">

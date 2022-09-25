@@ -37,10 +37,10 @@ const routes = require("./routes");
 
 //middlewares
 const {
-  firstMiddleware,
+  globalMiddleware,
   checkCsrfError,
   csrfGenerator,
-} = require("./src/middlewares/meuMiddleware");
+} = require("./src/middlewares/middleware");
 
 //usando a seguranca do helmet
 app.use(helmet());
@@ -78,7 +78,7 @@ app.set("view engine", "ejs");
 app.use(csrf());
 
 //usando os middlewares globais
-app.use(firstMiddleware);
+app.use(globalMiddleware);
 app.use(checkCsrfError);
 app.use(csrfGenerator);
 

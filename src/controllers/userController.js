@@ -1,4 +1,3 @@
-const session = require("express-session");
 const Login = require("../models/LoginModel");
 
 exports.registerPageRender = (req, res) => {
@@ -13,8 +12,8 @@ exports.registerAccount = async (req, res) => {
   if (login.errors.length > 0) {
     req.flash("erros", login.errors);
 
-    session.save(() => {
-      return res.redirect("back");
+    req.session.save(function () {
+      return res.redirect("/user/register");
     });
     return;
   }
