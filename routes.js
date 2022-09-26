@@ -11,5 +11,7 @@ route.post("/", homeController.postInitialPage);
 route.get("/user/register", userController.registerPageRender);
 route.post("/user/register", userController.registerAccount);
 route.get("/user/login", userController.login);
+route.post("/user/login", userController.loginUser);
+route.get("/user/logout", userController.logout);
 
 module.exports = route;

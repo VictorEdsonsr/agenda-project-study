@@ -1,7 +1,7 @@
-<%- include("includes/head"); %>
+<%- include("includes/head"); -%>
 
 <main class="d-flex flex-row h-100">
-    <%- include("includes/navbar") %>
+    <%- include("includes/navbar") -%>
 
 
 
@@ -9,7 +9,7 @@
         <form class=" g-3 mx-auto w-75 bg-dark rounded p-3 shadow " method="POST" action="/user/register">
             <h1 class="text-center">CRIAR UMA CONTA</h1>
 
-            <%-include("includes/messages");%>
+            <%-include("includes/messages"); -%>
 
             <input type="hidden" name="_csrf" value=<%=csrfToken %> />
             <div>
@@ -36,4 +36,4 @@
 
 
 
-<%- include("includes/footer"); %>
+<%- include("includes/footer"); -%>

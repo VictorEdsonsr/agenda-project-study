@@ -1,21 +1,24 @@
-<%- include("includes/head"); %>
+<%- include("includes/head"); -%>
 
 <main class="d-flex flex-row h-100">
-    <%- include("includes/navbar") %>
+    <%- include("includes/navbar") -%>
 
 
 
     <div class="text-white m-auto container h-100 d-flex justify-content-center align-items-center">
         <form class=" g-3 mx-auto w-75 bg-dark rounded p-3 shadow " method="POST" action="/user/login">
             <h1 class="text-center">ENTRE COM SUA CONTA</h1>
+
+            <%-include("includes/messages"); -%>
+
             <input type="hidden" name="_csrf" value=<%=csrfToken %> />
             <div>
                 <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="email" class="form-control" name="email" id="inputEmail4">
             </div>
             <div class="my-3">
                 <label for="inputPassword4" class="form-label">Senha</label>
-                <input type="password" class="form-control " id="inputPassword4">
+                <input type="password" class="form-control " name="password" id="inputPassword4">
             </div>
 
             <div class="text-center">
@@ -28,4 +31,4 @@
 
 
 
-<%- include("includes/footer"); %>
+<%- include("includes/footer"); -%>

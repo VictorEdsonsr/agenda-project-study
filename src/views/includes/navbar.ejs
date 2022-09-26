@@ -15,6 +15,7 @@
                 Home
             </a>
         </li>
+        <%if(!user){%>
         <li>
             <a href="/user/register" class="nav-link text-white link-primary">
                 <svg class="bi me-2" width="16" height="16">
@@ -23,20 +24,26 @@
                 Criar conta
             </a>
         </li>
-        <li>
-            <a href="/user/login" class="nav-link text-white link-primary">
-                <svg class="bi me-2" width="16" height="16">
-                    <use xlink:href="/user/login"></use>
-                </svg>
-                Entrar
-            </a>
-        </li>
+        <%}%>
+
     </ul>
     <hr>
     <div>
 
         <ul class="nav text-small shadow">
-            <li><a class="nav-link text-white" href="#">Sign out</a></li>
+            <%if(user){%>
+        <li>
+            <a href="/user/logout" class="nav-link text-white link-primary">
+                Sair
+            </a>
+        </li>
+        <%}else{%>
+        <li>
+            <a href="/user/login" class="nav-link text-white link-primary">
+                Entrar
+            </a>
+        </li>
+        <%}%>
         </ul>
     </div>
 </div>
