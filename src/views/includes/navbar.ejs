@@ -1,4 +1,4 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 40vw;">
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 30vw;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <svg class="bi me-2" width="40" height="32">
             <use xlink:href="#bootstrap"></use>
@@ -7,6 +7,7 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
+        <%if(user){%>
         <li class="nav-item">
             <a href="/" class="nav-link text-white link-primary" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
@@ -15,6 +16,16 @@
                 Home
             </a>
         </li>
+        <%}else{%>
+        <li class="nav-item">
+            <a href="/welcome" class="nav-link text-white link-primary" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="/weclcome"></use>
+                </svg>
+                Bem vindo(a)
+            </a>
+        </li>
+        <%}%>
         <%if(!user){%>
         <li>
             <a href="/user/register" class="nav-link text-white link-primary">
@@ -31,7 +42,7 @@
     <div>
 
         <ul class="nav text-small shadow">
-            <%if(user){%>
+        <%if(user){%>
         <li>
             <a href="/user/logout" class="nav-link text-white link-primary">
                 Sair
