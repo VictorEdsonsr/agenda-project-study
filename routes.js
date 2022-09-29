@@ -5,10 +5,10 @@ const userController = require("./src/controllers/userController");
 const contactControler = require("./src/controllers/contactControler");
 
 //HOME
-route.get("/", homeController.initialPage);
+route.get("/", homeController.welcomePage);
 
 //welcomePage
-route.get("/welcome", homeController.welcomePage);
+route.get("/home", homeController.initialPage);
 
 //USER
 route.get("/user/register", userController.registerPageRender);
@@ -22,5 +22,6 @@ route.get("/user/logout", userController.logout);
 //CREATE
 route.get("/contact/add", contactControler.addContactRender);
 route.post("/contact/add", contactControler.addContact);
+route.get("/contact/add/:id", contactControler.editContact);
 
 module.exports = route;

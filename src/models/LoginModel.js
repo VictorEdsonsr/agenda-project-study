@@ -69,7 +69,7 @@ class Login {
     }
 
     //checar senha valida
-    if (this.body.password.length < 8 || this.body.password.length > 12) {
+    if (this.body.password.length < 6 || this.body.password.length > 12) {
       this.errors.push("A senha tem que ter entre 8 e 12 caracteres");
     }
 
@@ -88,7 +88,7 @@ class Login {
     }
 
     //checar senha valida
-    if (this.body.password.length < 8 || this.body.password.length > 12) {
+    if (this.body.password.length < 6 || this.body.password.length > 12) {
       this.errors.push("A senha tem que ter entre 8 e 12 caracteres");
     }
   }

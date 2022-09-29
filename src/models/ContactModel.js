@@ -17,6 +17,14 @@ class Contact {
     this.contact = null;
   }
 
+  static async buscaId(id) {
+    if (typeof id !== "string") return;
+
+    const user = await ContactModel.findById(id);
+
+    return user;
+  }
+
   async contactAdd() {
     this.validContact();
 
@@ -26,11 +34,6 @@ class Contact {
     //criando user no banco de dados
     this.contact = await ContactModel.create(this.body);
   }
-
-  //   async userExists() {
-  //     this.user = await LoginModel.findOne({ email: this.body.email });
-  //     if (this.user) this.errors.push("Usuario ja existe");
-  //   }
 
   validContact() {
     this.cleanUp();

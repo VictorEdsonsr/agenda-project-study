@@ -7,8 +7,8 @@
 
     <div class="text-white m-auto container h-100 d-flex justify-content-center align-items-center">
         <form class=" g-3 mx-auto w-75 bg-dark rounded p-3 shadow " method="POST" action="/contact/add">
-            <h1 class="text-center">Adicione um contato</h1>
-
+            <h1 class="text-center">Contato</h1>
+            <p class="text-center">Adicione ou edite um contato abaixo.</p>
             <%-include("includes/messages"); -%>
 
             <input type="hidden" name="_csrf" value=<%=csrfToken %> />
@@ -16,7 +16,7 @@
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" class="form-control " required name="name" id="name">
             </div>
-            <div>
+            <div class="my-3">
                 <label for="Email4" class="form-label">Email</label>
                 <input type="email" class="form-control" name="email" id="Email4">
             </div>

@@ -21,10 +21,18 @@ exports.addContact = async (req, res) => {
     req.flash("success", "Contato adicionado com sucesso");
 
     req.session.save(() => {
-      res.redirect("/");
+      res.redirect(`/home`);
     });
   } catch (e) {
     console.log(e);
     res.render("404");
   }
+};
+
+exports.editContact = async (req, res) => {
+  if (!req.params) return res.render("404");
+
+  const contact = await Contact.buscaId(req.params.id);
+
+  res.render("addContacts", { contact });
 };

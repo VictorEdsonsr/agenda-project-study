@@ -1,4 +1,4 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 30vw;">
+<div class="d-flex flex-column w-25 flex-shrink-0 p-3 text-white bg-dark">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <svg class="bi me-2" width="40" height="32">
             <use xlink:href="#bootstrap"></use>
@@ -9,16 +9,16 @@
     <ul class="nav nav-pills flex-column mb-auto">
         <%if(user){%>
         <li class="nav-item">
-            <a href="/" class="nav-link text-white link-primary" aria-current="page">
+            <a href="/home" class="nav-link text-white link-primary" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="/"></use>
                 </svg>
-                Home
+                Inicio
             </a>
         </li>
         <%}else{%>
         <li class="nav-item">
-            <a href="/welcome" class="nav-link text-white link-primary" aria-current="page">
+            <a href="/" class="nav-link text-white link-primary" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="/weclcome"></use>
                 </svg>

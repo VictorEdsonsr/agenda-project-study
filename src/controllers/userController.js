@@ -23,7 +23,7 @@ exports.registerAccount = async (req, res) => {
     req.flash("success", "Voce foi cadastrado com sucesso");
 
     req.session.save(() => {
-      res.redirect("/user/register");
+      res.redirect("/user/login");
     });
   } catch (e) {
     res.render("404");
@@ -54,7 +54,7 @@ exports.loginUser = async (req, res) => {
     req.flash("success", "Voce logou com sucesso.");
     req.session.user = login.user;
     req.session.save(() => {
-      res.redirect("/");
+      res.redirect("/home");
     });
   } catch (e) {
     res.render("404");
@@ -68,5 +68,5 @@ exports.login = (req, res) => {
 
 exports.logout = (req, res) => {
   req.session.destroy();
-  res.redirect("/welcome");
+  res.redirect("/");
 };
