@@ -11,7 +11,7 @@ exports.registerAccount = async (req, res) => {
     await register.register();
 
     if (register.errors.length > 0) {
-      req.flash("errors", login.errors);
+      req.flash("errors", register.errors);
 
       req.session.save(() => {
         res.redirect("/user/register");

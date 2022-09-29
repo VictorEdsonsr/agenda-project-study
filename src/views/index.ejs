@@ -6,28 +6,37 @@
     <section class="d-flex w-100 justify-content-center align-items-center">
         <div class="d-flex flex-column mw-100 align-items-center">
             <%-include("includes/messages") -%>
+            <%if(contact.length > 0){%>
             <table class="table table-dark w-100">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Numero</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <%contact.forEach((contact )=> {%>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>victor edson</td>
-                        <td>victor@gmail.com</td>
-                        <td>5599999999999</td>
-                        <td><a class="text-primary" href="/">editar</a></td>
-                        <td><a class="text-danger" href="/">deletar</a></td>
+
+                        <td><%=contact.name%></td>
+                        <td><%=contact.email%></td>
+                        <td><%=contact.phone%></td>
+                        <td><a class="text-primary" href="/contact/index/<%=contact._id%>">editar</a></td>
+                        <td><a class="text-danger" href="/contact/delete/<%=contact._id%>">deletar</a></td>
+
+
                     </tr>
+                    <%})%>
                 </tbody>
             </table>
+            <%}else{%>
 
-            <a href="/contact/add" class="my-3 bg-dark p-3 text-white nav-link rounded">Adicionar contato</a>
+            <p class="text-center lead">Voce nao tem contatos</p>
+            <%}%>
+
+
+            <a href="/contact/index" class="my-3 bg-dark p-3 text-white nav-link rounded">Adicionar contato</a>
         </div>
 
     </section>

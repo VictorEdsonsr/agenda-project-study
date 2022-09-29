@@ -20,8 +20,10 @@ route.get("/user/logout", userController.logout);
 //CRUD
 
 //CREATE
-route.get("/contact/add", contactControler.addContactRender);
+route.get("/contact/index", contactControler.addContactRender);
 route.post("/contact/add", contactControler.addContact);
-route.get("/contact/add/:id", contactControler.editContact);
+route.get("/contact/index/:id", contactControler.editContact);
+route.post("/contact/edit/:id", contactControler.edit);
+route.get("/contact/delete/:id", contactControler.delete);
 
 module.exports = route;

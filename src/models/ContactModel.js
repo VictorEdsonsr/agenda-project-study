@@ -4,7 +4,7 @@ const validator = require("validator");
 const ContactSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: false, default: "" },
-  phone: { type: Number, required: false, default: "" },
+  phone: { type: String, required: false, default: "" },
   create: { type: Date, default: Date.now },
 });
 
@@ -17,12 +17,37 @@ class Contact {
     this.contact = null;
   }
 
+  async edit(id) {
+    if (typeof id !== "string") return;
+
+    this.validContact();
+
+    if (this.errors.length > 0) return;
+
+    this.contact = await ContactModel.findOneAndUpdate(id, this.body, {
+      new: true,
+    });
+  }
+
+  static async delete(id) {
+    if (typeof id !== "string") return;
+
+    const contact = await ContactModel.findOneAndDelete({ _id: id });
+
+    return contact;
+  }
+
   static async buscaId(id) {
     if (typeof id !== "string") return;
 
-    const user = await ContactModel.findById(id);
+    const contact = await ContactModel.findById(id);
 
-    return user;
+    return contact;
+  }
+
+  static async buscaContatos() {
+    const contact = await ContactModel.find().sort({ create: -1 });
+    return contact;
   }
 
   async contactAdd() {
